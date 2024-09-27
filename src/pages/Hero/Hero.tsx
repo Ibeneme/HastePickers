@@ -36,7 +36,13 @@ const Hero: React.FC = () => {
           src={logo}
           alt="Haste Pickers Logo"
           className="logo"
-          style={{ backgroundColor: "#ffffff30" }}
+          style={{
+            backgroundColor: "#ffffff17",
+            width: 130,
+            height: 130,
+            padding: 24,
+            borderRadius: 32,
+          }}
         />
 
         {/* Hero Title */}
