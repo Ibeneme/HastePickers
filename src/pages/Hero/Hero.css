@@ -1,0 +1,154 @@
+/* General styling for the hero section */
+section {
+    background-color: #030C21; /* Dark blue background */
+    height: 100%; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center;
+    padding: 160px 20px;
+    color: #fff; /* White text color */
+  }
+  
+  h1 {
+    font-size: 48px; /* Large title font size */
+    font-weight: bold; /* Bold text */
+    margin: 20px 0; /* Margin above and below the title */
+  }
+  
+  p {
+    font-size: 14px; /* Subtitle font size */
+    margin-bottom: 30px; /* Margin below subtitle */
+  }
+  
+  button {
+    padding: 15px 30px; /* Button padding */
+    background-color: #0f6df9; /* Button background color */
+    color: #fff; /* Button text color */
+    font-size: 16px; /* Button font size */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold; /* Bold button text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  button:hover {
+    background-color: #084bb9; /* Darker blue on hover */
+  }
+  
+  img {
+    max-width: 100%; /* Image responsive width */
+    border-radius: 10px; /* Rounded corners for image */
+    margin-top: 50px; /* Margin above the image */
+  }
+  
+  /* Modal overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to overlay content */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fff; /* White background for modal */
+    padding: 30px; /* Padding inside modal */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 500px; /* Max width for modal */
+    width: 100%; /* Full width */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    position: relative; /* Position for absolute elements inside */
+    animation: slideIn 0.3s ease-out; /* Animation for modal appearance */
+    text-align: left; /* Left-aligned text */
+  }
+  
+  /* Close icon */
+  .close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  /* Loader */
+  .loader {
+    display: flex;
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center align */
+    justify-content: center; /* Center vertically */
+  }
+  
+  .spinner {
+    animation: spin 1s linear infinite; /* Spinner animation */
+    margin-bottom: 10px; /* Margin below spinner */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); /* Start rotation */
+    }
+    100% {
+      transform: rotate(360deg); /* End rotation */
+    }
+  }
+  
+  /* Success message */
+  .success-message {
+    display: flex;
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center align */
+  }
+  
+  .success-message-h2 {
+    color: #28a745; /* Green color for success message */
+    margin-top: 10px; /* Margin above message */
+  }
+  
+  .success-message-p {
+    color: #6c757d; /* Gray color for subtitle */
+  }
+  
+  /* Input styling */
+  input[type="email"] {
+    padding: 10px; /* Padding for input */
+    margin-bottom: 20px; /* Margin below input */
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    background-color: #0f6df9; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .submit-btn:hover {
+    background-color: #084bb9; /* Darker background on hover */
+  }
+  
+  /* Modal animation */
+  @keyframes slideIn {
+    0% {
+      opacity: 0; /* Start transparent */
+      transform: translateY(-20px); /* Move up */
+    }
+    100% {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Back to position */
+    }
+  }

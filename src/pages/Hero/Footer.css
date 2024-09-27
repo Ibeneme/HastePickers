@@ -1,0 +1,93 @@
+.footer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    /* Shadow for depth */
+    color: #fff;
+    /* White text color */
+    display: flex;
+    justify-content: center;
+    /* Center the content */
+    padding: 15px 0;
+    /* Padding for top and bottom */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Space between left and right sections */
+    align-items: center;
+    /* Center items vertically */
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.1);
+    /* Glassmorphic effect */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+    color: #fff;
+    /* White text color */
+    display: flex;
+    justify-content: center;
+    /* Center the content */
+    padding: 24px 24px;
+    border-radius: 234px;
+    /* Set a max width for the footer content */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* Align logo and header vertically */
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    background-color: aqua;
+    padding: 8px;
+    /* Adjust logo size */
+    margin-right: 10px;
+    /* Space between logo and text */
+}
+
+.footer-header {
+    font-size: 16px;
+    /* Font size for the header */
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px
+        /* Bold font */
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+}
+
+.privacy-policy {
+    margin-right: 20px;
+    /* Space between policy and icons */
+    cursor: pointer;
+    text-align: center;
+    /* Pointer cursor on hover */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    /* Space between social icons */
+}
+
+.contact-info {
+    text-align: center;
+    /* Center the contact info text */
+    margin-top: 10px;
+    /* Space above the contact info */
+}
