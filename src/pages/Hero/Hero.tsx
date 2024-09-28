@@ -40,8 +40,8 @@ const Hero: React.FC = () => {
             backgroundColor: "#ffffff17",
             width: 130,
             height: 130,
-            padding: 24,
-            borderRadius: 32,
+            padding: 20,
+            borderRadius: 36,
           }}
         />
 
