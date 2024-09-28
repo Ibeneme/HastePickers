@@ -49,7 +49,15 @@ const Hero: React.FC = () => {
         <h1 style={{ fontWeight: "bold", margin: "20px 0" }}>
           Fast & Reliable
           <br />
-          <span style={{ color: "#F3FF00" }}>Dispatch Rider</span> Services
+          <span
+            style={{
+              color: "#fff",
+              //F3FF00
+            }}
+          >
+            Dispatch Rider
+          </span>{" "}
+          Services
         </h1>
 
         {/* Subtitle */}
