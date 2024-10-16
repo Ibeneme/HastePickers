@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section>
+    <section style={{borderBottom: `72px solid #0F6DF9`}}>
       <Footer />
       <div
         style={{

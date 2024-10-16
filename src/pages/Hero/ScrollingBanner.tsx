@@ -1,50 +1,35 @@
-import { useEffect, useRef } from "react";
+import React from "react";
 
 const ScrollingBanner = () => {
-  const bannerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const banner = bannerRef.current;
-    if (!banner) return; // Ensure banner is not null
-
-    let startPosition = banner.scrollWidth;
-
-    const scrollBanner = () => {
-      startPosition -= 2; // Adjust the speed by changing the number
-      if (startPosition < -banner.scrollWidth) {
-        startPosition = window.innerWidth; // Reset to the right side of the screen
-      }
-      banner.style.transform = `translateX(${startPosition}px)`;
-      requestAnimationFrame(scrollBanner);
-    };
-
-    scrollBanner();
-  }, []);
-
   return (
     <div
       style={{
         width: "100%",
         overflow: "hidden",
-        backgroundColor: "#FFD700",
+        backgroundColor: "#0F6DF9",
         position: "fixed",
         top: 0,
         zIndex: 1000,
         padding: "10px 0",
+        display: "flex",
+        justifyContent: "center", // Center horizontally
+        alignItems: "center", // Center vertically
       }}
     >
       <div
-        ref={bannerRef}
         style={{
-          display: "inline-block",
-          whiteSpace: "nowrap",
-          color: "#030C21",
+          color: "#fff", // Changed color to contrast with the background
           fontWeight: "bold",
           fontSize: "16px",
-          paddingLeft: "100%", // Start off the screen
+          whiteSpace: "nowrap",
+          fontFamily: "var(--fontFamily)",
         }}
       >
-        Services - Only in Port Harcourt, Nigeria 🇳🇬
+        <h2 style={{fontSize: 16}}>
+          {" "}
+          Our services are currently available exclusively in Port Harcourt,
+          Nigeria 🇳🇬
+        </h2>
       </div>
     </div>
   );
