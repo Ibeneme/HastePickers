@@ -6,9 +6,9 @@ import Footer from "./Footer";
 const TermsOfUse: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleTermsOfUseClick = () => {
-    navigate("/terms-of-use");
-  };
+//   const handleTermsOfUseClick = () => {
+//     navigate("/terms-of-use");
+//   };
 
   const handlePrivacyPolicyClick = (type: any) => {
     if (type === "privacy") {
