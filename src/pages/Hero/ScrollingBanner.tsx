@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const ScrollingBanner = () => {
-  const bannerRef = useRef(null);
+  const bannerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const banner = bannerRef.current;
+    if (!banner) return; // Ensure banner is not null
+
     let startPosition = banner.scrollWidth;
 
     const scrollBanner = () => {
