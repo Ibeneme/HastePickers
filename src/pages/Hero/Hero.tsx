@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SubscribeModal from "../SubscribeModal/SubscribeModal";
 import "./Hero.css";
-import heroImage from "../../assets/frame.png";
+import heroImage from "../../assets/screens.png";
 import Footer from "./Footer";
 import logo from "../../assets/logo.png";
 import { FaFacebook, FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
@@ -17,8 +17,14 @@ const Hero: React.FC = () => {
   const closeModal = () => setModalOpen(false);
   const navigate = useNavigate(); // Initialize useNavigate
 
-  const handlePrivacyPolicyClick = () => {
-    navigate("/privacy-policy"); // Navigate to privacy policy route
+  const handlePrivacyPolicyClick = (type: any) => {
+    if (type === "privacy") {
+      navigate("/privacy-policy"); // Navigate to privacy policy route
+    } else if (type === "terms") {
+      navigate("/terms-of-use"); // Navigate to privacy policy route
+    } else if (type === "faqs") {
+      navigate("/faqs"); // Navigate to privacy policy route
+    }
   };
 
   return (
@@ -30,6 +36,7 @@ const Hero: React.FC = () => {
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "600px",
+          marginTop:32
         }}
       >
         <img
@@ -41,7 +48,7 @@ const Hero: React.FC = () => {
             width: 130,
             height: 130,
             padding: 20,
-            borderRadius: 36,
+            borderRadius: 12,
           }}
         />
 
@@ -57,9 +64,9 @@ const Hero: React.FC = () => {
           >
             Dispatch Rider
           </span>{" "}
-          Services
+  
         </h1>
-
+    
         {/* Subtitle */}
         <p style={{ fontSize: "15px", marginBottom: "30px", lineHeight: 1.7 }}>
           Deliver anything, anytime, anywhere with ease using Haste Pickers. We
@@ -88,7 +95,11 @@ const Hero: React.FC = () => {
           <img
             src={heroImage}
             alt="Dispatch Rider"
-            style={{ maxWidth: "100%", borderRadius: "10px" }}
+            style={{
+              width: 500,
+              borderRadius: 84,
+              border: "24px solid #ffffff24",
+            }}
           />
         </div>
 
@@ -104,9 +115,35 @@ const Hero: React.FC = () => {
               gap: 4,
             }}
           >
-            <p className="privacy-policy" onClick={handlePrivacyPolicyClick}>
-              Privacy Policy
-            </p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-around",
+              }}
+            >
+              <p
+                className="privacy-policy"
+                onClick={() => handlePrivacyPolicyClick("privacy")}
+              >
+                Privacy Policy
+              </p>
+
+              <p className="privacy-policy">||</p>
+              <p
+                className="privacy-policy"
+                onClick={() => handlePrivacyPolicyClick("terms")}
+              >
+                Terms of Use
+              </p>
+              <p className="privacy-policy">||</p>
+              <p
+                className="privacy-policy"
+                onClick={() => handlePrivacyPolicyClick("faqs")}
+              >
+                FAQs
+              </p>
+            </div>
             {/* Right side with privacy policy and social icons */}
             <div
               className="social-icons"

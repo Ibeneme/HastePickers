@@ -15,6 +15,7 @@ const Footer: React.FC = () => {
     <div className="footer">
       <div className="footer-content" onClick={navigateToHome} style={{ cursor: "pointer" }}>
         {/* Left side with logo and header */}
+        
         <div className="footer-left">
           <MdOutlineElectricBike size={24} style={{ marginRight: 8 }} />{" "}
           <h2 className="footer-header">Haste Pickers</h2>
